@@ -35,3 +35,19 @@ The interactive Power BI dashboard includes:
 | Power BI | Interactive dashboard |
 
 ## Project Structure
+ocean-health-project/
+├── data/                          # Raw CO2 dataset (OWID)
+├── output/                        # Cleaned data, SQL exports, dashboard
+├── clean.py                       # Data cleaning script
+├── analyse.py                     # Python analysis
+├── load_sql.py                    # Load data into SQLite
+├── export_sql.py                  # SQL business queries
+└── ocean_health_dashboard.pbix    # Power BI dashboard
+
+## Data Source
+
+[Our World in Data — CO₂ and Greenhouse Gas Emissions](https://ourworldindata.org/co2-emissions)
+
+## Author
+
+Built as part of a data analytics portfolio focused on environmental intelligence and sustainability reporting.
