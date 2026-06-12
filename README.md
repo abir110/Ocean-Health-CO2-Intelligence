@@ -35,6 +35,8 @@ The interactive Power BI dashboard includes:
 | Power BI | Interactive dashboard |
 
 ## Project Structure
+
+
 ocean-health-project/
 ├── data/                          # Raw CO2 dataset (OWID)
 ├── output/                        # Cleaned data, SQL exports, dashboard
