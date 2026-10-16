@@ -1,0 +1,5 @@
+__pycache__/
+.ipynb_checkpoints/
+output/ocean_health.db
+Thumbs.db
+desktop.ini

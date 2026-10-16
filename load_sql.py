@@ -11,3 +11,5 @@ print("Database created!")
 print("Rows:", pd.read_sql("SELECT COUNT(*) as total FROM co2_emissions", conn).iloc[0,0])
 
 conn.close()
+
+
