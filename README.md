@@ -1,4 +1,4 @@
-# 🌍 Ocean & Atmosphere: CO₂ Intelligence Brief
+# Ocean & Atmosphere: CO₂ Intelligence Brief
 
 > A data brief for a wildlife documentary team: **125 years of CO₂ emissions (1900–2024) across 215 countries and territories**, showing how emissions grew, who drove them, and where the story should focus. Built with Python, SQL and Power BI.
 
@@ -8,13 +8,13 @@
 
 ---
 
-## 🎬 The brief
+## The brief
 
 *"We're filming a documentary on climate change. Show us, with data, how the planet got here and where the story needs to focus."*
 
 (A hypothetical brief, used to frame the analysis for a non-technical audience.)
 
-## 📌 Key findings
+## Key findings
 
 | # | Finding | Evidence |
 |---|---|---|
@@ -27,7 +27,7 @@
 
 ---
 
-## 📊 Dashboard
+## Dashboard
 
 ![Dashboard preview](dashboard-preview.PNG)
 
@@ -40,14 +40,14 @@ The interactive Power BI dashboard ([`ocean-health-dashboard.pbix`](ocean-health
 
 ---
 
-## 🔧 How it works
+## How it works
 
 1. **Clean (Python, `code.ipynb`):** load the Our World in Data file, rename columns, keep 1900 onwards, and **remove aggregate rows** such as *World*, continents and income groups. Those rows have `OWID_` codes rather than 3-letter country codes, and leaving them in would double-count emissions.
 2. **Load (`load_sql.py`):** write the clean data into a SQLite database.
 3. **Analyse (`export_sql.py`):** four SQL queries produce the dashboard tables: yearly totals, top 10 emitters, USA vs China, and emissions by decade.
 4. **Visualise (Power BI):** the dashboard reads the four CSVs in `output/`.
 
-## 🗂️ Repository structure
+## Repository structure
 
 ```
 Ocean-Health-CO2-Intelligence/
@@ -67,7 +67,7 @@ Ocean-Health-CO2-Intelligence/
 └── README.md
 ```
 
-## ▶️ How to run
+## How to run
 
 ```bash
 git clone https://github.com/abir110/Ocean-Health-CO2-Intelligence.git
@@ -80,12 +80,12 @@ python export_sql.py                                   # creates the four dashbo
 
 To refresh the dashboard on a new machine, open the `.pbix` file and point the data source at your `output/` folder (**Transform data → Data source settings → Change source**).
 
-## ⚠️ Notes
+## Notes
 
 - Emissions are **fossil CO₂ from fuels and industry** as reported by Our World in Data, in tonnes. Land-use change is not included.
 - The **2020s decade is incomplete** (2020–2024 only), so its decade total is not comparable with full decades.
 
-## 📚 Data source
+## Data source
 
 [Our World in Data, CO₂ and Greenhouse Gas Emissions](https://ourworldindata.org/co2-emissions), based on the Global Carbon Project.
 
